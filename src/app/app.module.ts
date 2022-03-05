@@ -2,13 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { DynamicComponent } from './dynamic/dynamic.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DynamicComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxSkeletonLoaderModule.forRoot({
+      animation: 'pulse'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
