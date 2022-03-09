@@ -1,0 +1,31 @@
+<section
+  #contentWrapper
+  class="wrapper"
+>
+  ...all
+  <ng-content></ng-content>
+  ...all
+</section>
+
+<header class="header">
+  <div class="title">
+    <ng-content select="preview-title"></ng-content>
+  </div>
+
+  <ng-content select="preview-pagination"></ng-content>
+
+  <div class="actions">
+    <ng-content select="preview-action"></ng-content>
+  </div>
+</header>
+
+<footer class="footer">
+  <app-preview-action
+    *ngIf="rotatable"
+  >
+  </app-preview-action>
+
+  <app-preview-zoom
+    *ngIf="zoomable">
+  </app-preview-zoom>
+</footer>
