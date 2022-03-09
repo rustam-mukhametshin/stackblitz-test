@@ -1,0 +1,9 @@
+<ng-container *ngIf="cats">
+  <div *ngFor="let catUrl of cats">
+    <img [ngClass]="{
+      'hidden': !catUrl.active
+    }" [src]="catUrl.src" alt="test">
+  </div>
+</ng-container>
+
+<input type="range">
